@@ -1,0 +1,36 @@
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Registrese</h1>
+        <p class="lead text-muted mb-0">CHECK YOUR LIST !</p>
+    </div>
+</section>
+<section class="jumbotron text-left">
+    <div class="container">
+        <h2><%= t('.sign_up', :default => "Sign up") %></h2>
+
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+			  <%= devise_error_messages! %>
+
+			  <div class="field form-group">
+			  <%= f.label :email %><br />
+			  <%= f.email_field :email , class: 'form-control' , required:"true"%>
+			  </div>
+
+			  <div class="field form-group">
+			  <%= f.label :password %><br />
+			  <%= f.password_field :password , class: 'form-control', required:"true"%>
+			  </div>
+
+			  <div class="field form-group">
+			  <%= f.label :password_confirmation %><br />
+			  <%= f.password_field :password_confirmation , class: 'form-control', required:"true"%>
+			  </div>
+
+			  <div class="actions form-group">
+			    <%= f.submit "Iniciar Sesión" , class: 'btn btn-success'%>
+			  </div>
+			<% end %>
+
+			<%= render "devise/shared/links" %>
+    </div>
+</section>
