@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :actividades
+  resources :profesionales
   resources :clientes
   devise_for :users
   

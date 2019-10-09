@@ -1,3 +1,5 @@
+
+
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -12,34 +14,49 @@
             <div class="card">
                 <div class="card-body">
                   <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
-                  	<p id="notice"><%= notice %></p>
+                  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @profesionale.rut %>
+</p>
 
 <p>
   <strong>Nombre:</strong>
-  <%= @cliente.nombre %>
+  <%= @profesionale.nombre %>
+</p>
+
+<p>
+  <strong>Segundo nombre:</strong>
+  <%= @profesionale.segundo_nombre %>
 </p>
 
 <p>
   <strong>Apellido paterno:</strong>
-  <%= @cliente.apellido_paterno %>
+  <%= @profesionale.apellido_paterno %>
 </p>
 
 <p>
   <strong>Apellido materno:</strong>
-  <%= @cliente.apellido_materno %>
+  <%= @profesionale.apellido_materno %>
 </p>
 
 <p>
-  <strong>Rut:</strong>
-  <%= @cliente.rut %>
+  <strong>Profesion:</strong>
+  <%= @profesionale.profesion %>
 </p>
 
-<%= link_to 'Editar', edit_cliente_path(@cliente) %> |
-<%= link_to 'Volver', clientes_path %>
+<p>
+  <strong>Descripcion:</strong>
+  <%= @profesionale.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_profesionale_path(@profesionale) %> |
+<%= link_to 'Volver', profesionales_path %>
 
 
    
-					</div>
+          </div>
                    
                 </div>
             </div>
@@ -47,3 +64,4 @@
         
     </div>
 </div>
+
