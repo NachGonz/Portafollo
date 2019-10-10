@@ -28,7 +28,7 @@ class ProfesionalesController < ApplicationController
 
     respond_to do |format|
       if @profesionale.save
-        format.html { redirect_to @profesionale, notice: 'Profesionale was successfully created.' }
+        format.html { redirect_to @profesionale, notice: 'Profesional fue creado con éxito.' }
         format.json { render :show, status: :created, location: @profesionale }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ProfesionalesController < ApplicationController
   def update
     respond_to do |format|
       if @profesionale.update(profesionale_params)
-        format.html { redirect_to @profesionale, notice: 'Profesionale was successfully updated.' }
+        format.html { redirect_to @profesionale, notice: 'Profesional se actualizó con éxito.' }
         format.json { render :show, status: :ok, location: @profesionale }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ProfesionalesController < ApplicationController
   def destroy
     @profesionale.destroy
     respond_to do |format|
-      format.html { redirect_to profesionales_url, notice: 'Profesionale was successfully destroyed.' }
+      format.html { redirect_to profesionales_url, notice: 'Profesional fue destruido con éxito.' }
       format.json { head :no_content }
     end
   end

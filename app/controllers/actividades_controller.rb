@@ -28,7 +28,7 @@ class ActividadesController < ApplicationController
 
     respond_to do |format|
       if @actividade.save
-        format.html { redirect_to @actividade, notice: 'Actividade was successfully created.' }
+        format.html { redirect_to @actividade, notice: 'Actividad fue creada con éxito.' }
         format.json { render :show, status: :created, location: @actividade }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ActividadesController < ApplicationController
   def update
     respond_to do |format|
       if @actividade.update(actividade_params)
-        format.html { redirect_to @actividade, notice: 'Actividade was successfully updated.' }
+        format.html { redirect_to @actividade, notice: 'Actividad se actualizó con éxito' }
         format.json { render :show, status: :ok, location: @actividade }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class ActividadesController < ApplicationController
   def destroy
     @actividade.destroy
     respond_to do |format|
-      format.html { redirect_to actividades_url, notice: 'Actividade was successfully destroyed.' }
+      format.html { redirect_to actividades_url, notice: 'Actividad fue destruida con éxito.' }
       format.json { head :no_content }
     end
   end
